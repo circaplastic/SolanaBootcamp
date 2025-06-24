@@ -82,9 +82,10 @@ export async function deployGreetAccount(
   console.log("Program ID account: ", programId.toBase58());
 
   const GREETING_SEED = "hello_this_can_be_anything";
+  const WRONG_SEED = "this is the wrong seed";
   let greetedPubkey = await PublicKey.createWithSeed(
     payer.publicKey,
-    GREETING_SEED,
+    WRONG_SEED,
     programId
   );
 
